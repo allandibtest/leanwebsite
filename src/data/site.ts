@@ -13,11 +13,11 @@ export const SITE = {
    * sitemap and robots.txt use it. Until the site has its own domain, this is
    * its workers.dev address.
    */
-  url: 'https://www.biomemechanics.com',
+  url: 'https://leanwebsite.allandibtest.workers.dev',
   /** The home page's description, under 160 characters. */
   description: 'Maintenance gardening in the Northern San Francisco Bay Area: weeding, pruning, planting and sheet mulching, built from the soil up.',
   /** Analytics load on this hostname only, so previews and workers.dev visits never reach the numbers. */
-  liveHost: 'www.biomemechanics.com',
+  liveHost: 'leanwebsite.allandibtest.workers.dev',
   /** The GA4 measurement id, or empty for no analytics. */
   gaId: '',
   /** The handle shown on Twitter cards, or empty. */
