@@ -27,7 +27,7 @@ import jeffreyAndSoba from '../assets/jeffrey-and-soba.jpg';
 export const HERO = {
   /** A short line above the headline, or empty for none. */
   eyebrow: 'Maintenance gardening · Northern San Francisco Bay Area',
-  headline: 'We believe that soil health is the foundation of a great garden.',
+  headline: 'A garden you’ll love coming home to.',
   subheadline:
     'BiomeMechanics is a maintenance gardening services organization serving the Northern San Francisco bay area, encompassing the city of San Francisco, southern Marin county, northern Alameda county and western, bay-side Contra Costa county.',
   /** One line under every button, or empty: what happens next, a guarantee, a limit. */
