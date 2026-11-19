@@ -1,0 +1,39 @@
+---
+/**
+ * A heading, an opening line, then two to four cards, each with a photograph,
+ * a title, a few paragraphs and an optional note (a minimum, a limit). Good
+ * for the services a business offers.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  id: string;
+  title: string;
+  intro?: string;
+  items: readonly { title: string; image: ImageMetadata; alt: string; paragraphs: readonly string[]; note?: string }[];
+}
+const { id, title, intro, items } = Astro.props;
+const columns = items.length >= 3 ? 'lg:grid-cols-3' : 'md:grid-cols-2';
+---
+
+<section id={id} class="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-20">
+  <h2 class="heading-2 max-w-[42rem]">{title}</h2>
+  {intro && <p class="copy mt-6 max-w-[42rem] font-body text-[1.0625rem] leading-relaxed sm:text-[1.1875rem]" set:html={intro} />}
+  <ul class:list={['mt-10 grid gap-5 sm:gap-6', columns]}>
+    {
+      items.map((item) => (
+        <li class="flex flex-col overflow-hidden rounded-2xl bg-surface">
+          <Image src={item.image} alt={item.alt} widths={[480, 768]} sizes="(min-width: 1024px) 33vw, 100vw" class="aspect-[4/3] w-full object-cover" />
+          <div class="flex flex-1 flex-col p-5 sm:p-6">
+            <h3 class="heading-3">{item.title}</h3>
+            <div class="copy mt-3 space-y-4 font-body text-[1rem] leading-relaxed">
+              {item.paragraphs.map((p) => <p set:html={p} />)}
+            </div>
+            {item.note && <p class="mt-5 border-t border-line pt-4 font-body text-[0.9375rem] font-bold text-accent-ink">{item.note}</p>}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>

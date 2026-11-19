@@ -4,3 +4,7 @@
 # that no rule hides a live page. Renaming a page later? Add its old address
 # here in the same commit. Replacing an older website? List each of its page
 # addresses here, so nobody following an old link lands on a dead end.
+/services-1                                              /                                      301
+/portfolio                                               /                                      301
+/post/developing-ideas-for-your-own-garden               /developing-ideas-for-your-own-garden  301
+/portfolio-collections/my-portfolio/portfolio-images     /                                      301

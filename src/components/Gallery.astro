@@ -1,0 +1,32 @@
+---
+/**
+ * A heading, an opening line and a grid of photographs, each with an optional
+ * caption under it. Good for a portfolio of work. Photographs keep their own
+ * shape and flow in columns, so tall and wide pictures sit together.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  id: string;
+  title: string;
+  intro?: string;
+  items: readonly { image: ImageMetadata; alt: string; caption?: string }[];
+}
+const { id, title, intro, items } = Astro.props;
+---
+
+<section id={id} class="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-20">
+  <h2 class="heading-2 max-w-[42rem]">{title}</h2>
+  {intro && <p class="copy mt-6 max-w-[42rem] font-body text-[1.0625rem] leading-relaxed sm:text-[1.1875rem]" set:html={intro} />}
+  <div class="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3">
+    {
+      items.map((item) => (
+        <figure class="mb-5 break-inside-avoid">
+          <Image src={item.image} alt={item.alt} widths={[480, 768, 1200]} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" class="w-full rounded-xl" />
+          {item.caption && <figcaption class="mt-2.5 font-body text-[0.9375rem] leading-snug text-muted">{item.caption}</figcaption>}
+        </figure>
+      ))
+    }
+  </div>
+</section>

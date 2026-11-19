@@ -3,13 +3,13 @@
 # src/styles/brand.css and src/data/brand.ts (both generated, never edited).
 # The sections below the block explain each value and how to change it.
 colors:
-  paper: "#ffffff"       # the page ground
-  surface: "#f4f4f5"     # cards, panels and alternate bands
-  ink: "#18181b"         # headings and body text
-  muted: "#52525b"       # secondary text
-  line: "#e4e4e7"        # rules and borders
-  accent: "#2563eb"      # buttons, marks, underlines, focus rings
-  accent-ink: "#1d4ed8"  # the accent used as text; must read on paper
+  paper: "#ffffff"       # the page ground, white as on the old site
+  surface: "#f1f7ef"     # cards, panels and alternate bands: a pale leaf green
+  ink: "#1b241d"         # headings and body text: near-black with a green cast
+  muted: "#4f5b52"       # secondary text
+  line: "#dde7da"        # rules and borders
+  accent: "#2f8a3b"      # buttons: the logo's green, darkened so white text reads on it
+  accent-ink: "#2a7533"  # the accent used as text; must read on paper
   # inverse:             # optional: the other ground for one band (see Colour)
   #   paper: "#18181b"
   #   surface: "#27272a"
@@ -19,18 +19,18 @@ colors:
   #   accent-ink: "#93c5fd"   # only if the main accent-ink does not read on this paper
 fonts:
   display:
-    family: Inter Variable
-    fallback: ui-sans-serif, system-ui, sans-serif
-    import: "@fontsource-variable/inter/wght.css"
+    family: Nunito Variable
+    fallback: ui-rounded, ui-sans-serif, system-ui, sans-serif
+    import: "@fontsource-variable/nunito/wght.css"
   body:
-    family: Inter Variable
+    family: Nunito Sans Variable
     fallback: ui-sans-serif, system-ui, sans-serif
-    import: "@fontsource-variable/inter/wght.css"
+    import: "@fontsource-variable/nunito-sans/wght.css"
 logo:
-  light: null            # e.g. /brand/logo.svg; null shows the site name as text
+  light: /brand/logo.svg # the three-colour wordmark
   dark: null             # the version for dark grounds, if there is one
-  width: 140             # rendered size in the header, in pixels
-  height: 28
+  width: 182             # rendered size in the header, in pixels
+  height: 18
 icons:
   svg: /brand/favicon.svg
   png32: /brand/icon-32.png
@@ -49,10 +49,29 @@ business's own.
 
 ## Where the values came from
 
-The kit's defaults. Replace this section with where the business's values
-came from: its logo, its current website (the address and the date it was
-read) or its brand guide (the file and its version), and anything that was
-changed on the way in, such as an accent darkened to read as text.
+The business's previous website, https://www.biomemechanics.com (a Wix site),
+read on 19 November 2026.
+
+- **Logo.** The old site had the wordmark only as a 213×33 pixel PNG, too small
+  to stay sharp. It was redrawn as a vector (`public/brand/logo.svg`) in Nunito
+  Bold, an open rounded face that matches the original letterforms, keeping
+  its three colours: "biome" in sunflower yellow `#F2B71F`, "mech" in leaf
+  green `#3FA34A` and "anics" in sky blue `#1BA1E2`, all sampled from the
+  original logo. If the original logo artwork turns up (an SVG, PDF or
+  large PNG), it should replace this redraw.
+- **Colour.** The old site's buttons and navigation were the logo's green.
+  The accent is that green darkened to `#2f8a3b` so white button text reads on
+  it, and `accent-ink` a step darker again to pass 4.5:1 as text. The pale
+  green surface and green-tinged ink are new, chosen to sit with the logo.
+  The old site's red contact panel came with its Wix template, not the
+  brand, and was not carried over.
+- **Type.** The old site used Helvetica and Avenir, which are commercial.
+  Headings are now Nunito, echoing the rounded logo; body text is Nunito Sans,
+  the nearest open face to Avenir.
+- **Icons.** A rounded yellow "b" on the logo green, made for this site. The
+  old site's favicon was a flower illustration that does not read at 32 pixels.
+- **Share image.** The wordmark over the business's own photograph of the
+  tiered garden at Fort Mason, Black Point.
 
 ## Colour
 
@@ -111,8 +130,11 @@ shown when a page is shared.
 
 ## Imagery
 
-Notes on the business's photography and illustration go here: what there is,
-what to keep, what to avoid.
+The business's own photographs of its work, from the old site's portfolio:
+native and habitat plantings, sheet-mulching projects step by step, and the
+tiered garden at Fort Mason. Keep to real photographs of real gardens. The old
+site also used Wix stock pictures (wild flowers, garden tools, a waiting room
+and a smiling gardener who may not be on the team); those were left out.
 
 ## Changing the brand
 

@@ -7,17 +7,17 @@
  */
 export const SITE = {
   /** The business name: page titles, the footer, and the header when DESIGN.md sets no logo. */
-  name: 'Example Business',
+  name: 'BiomeMechanics',
   /**
    * The address the site is on, no trailing slash. Canonical links, the
    * sitemap and robots.txt use it. Until the site has its own domain, this is
    * its workers.dev address.
    */
-  url: 'https://example.com',
+  url: 'https://www.biomemechanics.com',
   /** The home page's description, under 160 characters. */
-  description: 'What the business does, who it is for and the result they get. Replace this line with the real one.',
+  description: 'Maintenance gardening in the Northern San Francisco Bay Area: weeding, pruning, planting and sheet mulching, built from the soil up.',
   /** Analytics load on this hostname only, so previews and workers.dev visits never reach the numbers. */
-  liveHost: 'example.com',
+  liveHost: 'www.biomemechanics.com',
   /** The GA4 measurement id, or empty for no analytics. */
   gaId: '',
   /** The handle shown on Twitter cards, or empty. */
@@ -30,9 +30,10 @@ export const SITE = {
  * shows the logo and the button.
  */
 export const NAV: { href: string; label: string }[] = [
-  { href: '/#how', label: 'How it works' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#portfolio', label: 'Portfolio' },
   { href: '/about', label: 'About' },
-  { href: '/#faqs', label: 'FAQs' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 /**
@@ -41,23 +42,24 @@ export const NAV: { href: string; label: string }[] = [
  * address (a booking page, a checkout). An empty label means no button.
  */
 export const CTA = {
-  label: 'Get in touch',
+  label: 'Book a consultation',
   href: '/#contact',
 } as const;
 
 /** Footer navigation. */
 export const FOOTER_LINKS = [
   { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];
 
 /** How to reach the business: the contact page, and the home page's contact section when there is no form. */
 export const CONTACT = {
-  email: 'hello@example.com',
+  email: 'info@biomemechanics.com',
   /** The phone number as it should be shown, or empty for none. */
-  phone: '',
+  phone: '415-378-7755',
   /** The same number as a link, such as 'tel:+61400000000', or empty. */
-  phoneHref: '',
+  phoneHref: 'tel:+14153787755',
   /** The postal address, one line per entry, or an empty list for none. */
   address: [] as string[],
 };

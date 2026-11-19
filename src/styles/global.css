@@ -17,8 +17,8 @@
  * otherwise the browser fakes a bold and the letters smear.
  */
 :root {
-  --display-weight: 600;
-  --display-tracking: -0.02em;
+  --display-weight: 750;
+  --display-tracking: -0.01em;
 }
 @theme inline {
   --color-paper: var(--paper);
