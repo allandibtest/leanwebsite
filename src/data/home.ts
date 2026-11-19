@@ -43,7 +43,7 @@ export const PROOF: { value: string; label: string }[] = [];
 export const INTRO = {
   title: 'Welcome',
   paragraphs: [
-    'Soil health supports a robust living community of fungal, bacterial and invertebrate communities that enhance plant health, providing habitat for birds and other pollinators, supporting a web of life that enhances the quality of our own lives.',
+    'We believe that soil health is the foundation of a great garden. Soil health supports a robust living community of fungal, bacterial and invertebrate communities that enhance plant health, providing habitat for birds and other pollinators, supporting a web of life that enhances the quality of our own lives.',
     'We are focused on soft-scaping services (weeding, pruning, planting, sheet mulching and similar services). We delight in native and habitat garden work, though we aren’t snooty about pure ornamental and mixed native/ornamental garden work.',
   ],
 };
